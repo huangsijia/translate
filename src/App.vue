@@ -22,7 +22,7 @@
     },
     methods: {
       inputMessageFun(text, language) {
-        this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170721T082515Z.54cf3dc583f679db.f4a96182281281d8b5dfe24b4e88298e2133f219&lang='+language+'&text='+text).then((Response)=>{
+        this.$http.get('https://translate.google.cn/#view=home&op=translate&sl=zh-CN&tl='+ language+'&text='+text).then((Response)=>{
           this.outputMessage = Response.body.text[0];
         })
       }
